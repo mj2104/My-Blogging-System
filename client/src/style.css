@@ -1,0 +1,1772 @@
+/* =========================================================
+   MYBLOG - COMPLETE STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background: #f8f5ff;
+
+    color: #24202b;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    width: 100%;
+
+    padding: 18px 7%;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #eee7f5;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 4px 20px
+        rgba(67, 42, 112, 0.06);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    border: none;
+
+    background: transparent;
+
+    color: #6c4ab6;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.25s;
+}
+
+
+.logo:hover {
+    color: #432a70;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+
+.nav-button {
+    border: none;
+
+    background: transparent;
+
+    color: #51495d;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.nav-button:hover {
+    background: #f1eafd;
+
+    color: #6c4ab6;
+}
+
+
+/* =========================================================
+   CREATE POST NAV BUTTON
+========================================================= */
+
+.create-nav-button {
+    background: #6c4ab6;
+
+    color: #ffffff;
+}
+
+
+.create-nav-button:hover {
+    background: #432a70;
+
+    color: #ffffff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   USER AREA
+========================================================= */
+
+.user-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.user-name {
+    color: #432a70;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+========================================================= */
+
+.logout-button {
+    border: 1px solid #e8dff2;
+
+    background: #ffffff;
+
+    color: #6c4ab6;
+
+    padding: 9px 15px;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.logout-button:hover {
+    background: #fff0ef;
+
+    color: #d95750;
+
+    border-color: #ffd6d2;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    width: 86%;
+
+    max-width: 1200px;
+
+    margin: 55px auto 40px;
+
+    padding: 60px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4ab6 0%,
+            #8a64cf 55%,
+            #ef8d7c 100%
+        );
+
+    color: #ffffff;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 45px
+        rgba(108, 74, 182, 0.25);
+}
+
+
+/* Decorative circles */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    top: -100px;
+
+    right: 100px;
+}
+
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 232, 163, 0.18);
+
+    bottom: -90px;
+
+    right: -30px;
+}
+
+
+/* Hero content */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 720px;
+}
+
+
+.hero-small {
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    opacity: 0.85;
+
+    margin-bottom: 16px;
+}
+
+
+.hero h1 {
+    font-size: 50px;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+    font-weight: 800;
+}
+
+
+.hero p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    opacity: 0.92;
+
+    margin-bottom: 30px;
+
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-button {
+    border: none;
+
+    background: #ffffff;
+
+    color: #6c4ab6;
+
+    padding: 14px 23px;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.hero-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.content {
+    width: 86%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-bottom: 70px;
+
+    flex: 1;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+
+.section-heading h2 {
+    font-size: 30px;
+
+    color: #432a70;
+
+    margin-bottom: 7px;
+}
+
+
+.section-heading p {
+    color: #766d7e;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   BLOG GRID
+========================================================= */
+
+.posts-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(300px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   BLOG CARD
+========================================================= */
+
+.blog-card {
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    border: 1px solid #eee7f5;
+
+    box-shadow:
+        0 8px 25px
+        rgba(67, 42, 112, 0.07);
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s;
+}
+
+
+.blog-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(67, 42, 112, 0.12);
+}
+
+
+/* =========================================================
+   BLOG CATEGORY
+========================================================= */
+
+.blog-category {
+    display: inline-block;
+
+    padding: 6px 11px;
+
+    background: #f1eafd;
+
+    color: #6c4ab6;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   BLOG TITLE
+========================================================= */
+
+.blog-card h3 {
+    font-size: 22px;
+
+    color: #2d2635;
+
+    margin-bottom: 12px;
+
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   BLOG CONTENT
+========================================================= */
+
+.blog-content {
+    color: #6f6777;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   BLOG AUTHOR
+========================================================= */
+
+.blog-author {
+    color: #6c4ab6;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   CARD ACTIONS
+========================================================= */
+
+.card-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   EDIT / DELETE
+========================================================= */
+
+.edit-button,
+.delete-button {
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.edit-button {
+    background: #eee6fb;
+
+    color: #6c4ab6;
+}
+
+
+.edit-button:hover {
+    background: #dcccf3;
+}
+
+
+.delete-button {
+    background: #fff0ef;
+
+    color: #d95750;
+}
+
+
+.delete-button:hover {
+    background: #ffdcd8;
+}
+
+
+/* =========================================================
+   AUTH PAGE
+========================================================= */
+
+.auth-page {
+    min-height: 70vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+
+/* =========================================================
+   AUTH CARD
+========================================================= */
+
+.auth-card {
+    width: 100%;
+
+    max-width: 460px;
+
+    background: #ffffff;
+
+    padding: 42px;
+
+    border-radius: 26px;
+
+    border: 1px solid #eee7f5;
+
+    box-shadow:
+        0 20px 50px
+        rgba(67, 42, 112, 0.12);
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Colorful top border */
+
+.auth-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6c4ab6,
+            #ef8d7c,
+            #d9c7e8
+        );
+}
+
+
+/* =========================================================
+   AUTH ICON
+========================================================= */
+
+.auth-icon {
+    width: 65px;
+
+    height: 65px;
+
+    margin: 5px auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #f1eafd;
+
+    font-size: 28px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(108, 74, 182, 0.12);
+}
+
+
+/* =========================================================
+   AUTH HEADING
+========================================================= */
+
+.auth-card h2 {
+    font-size: 30px;
+
+    color: #432a70;
+
+    margin-bottom: 10px;
+}
+
+
+.auth-subtitle {
+    color: #766d7e;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   AUTH FORM
+========================================================= */
+
+.auth-card form {
+    text-align: left;
+}
+
+
+.auth-card .form-group {
+    margin-bottom: 20px;
+}
+
+
+.auth-card .form-group label {
+    display: block;
+
+    font-size: 14px;
+
+    color: #4b4352;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+
+.auth-card .form-group input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background: #faf8fd;
+
+    border: 1px solid #ddd4e8;
+
+    border-radius: 11px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    color: #2d2635;
+
+    outline: none;
+
+    transition: all 0.25s;
+}
+
+
+.auth-card .form-group input::placeholder {
+    color: #aaa1b2;
+}
+
+
+.auth-card .form-group input:focus {
+    background: #ffffff;
+
+    border-color: #6c4ab6;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(108, 74, 182, 0.1);
+}
+
+
+/* =========================================================
+   AUTH SUBMIT
+========================================================= */
+
+.auth-submit {
+    width: 100%;
+
+    border: none;
+
+    padding: 14px;
+
+    margin-top: 5px;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4ab6,
+            #8a64cf
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.25s;
+
+    box-shadow:
+        0 8px 20px
+        rgba(108, 74, 182, 0.2);
+}
+
+
+.auth-submit:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(108, 74, 182, 0.28);
+}
+
+
+.auth-submit:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   AUTH SWITCH
+========================================================= */
+
+.auth-switch {
+    margin-top: 25px;
+
+    color: #766d7e;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   AUTH LINK
+========================================================= */
+
+.auth-link {
+    display: block;
+
+    margin: 4px auto 0;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #6c4ab6;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.auth-link:hover {
+    color: #ef8d7c;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CREATE POST PAGE
+========================================================= */
+
+.create-page {
+    max-width: 900px;
+
+    margin: 50px auto 80px;
+
+    padding: 0 10px;
+}
+
+
+/* =========================================================
+   CREATE HEADER
+========================================================= */
+
+.create-header {
+    margin-bottom: 28px;
+}
+
+
+.create-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #ef8d7c;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.create-header h2 {
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    color: #432a70;
+
+    margin-bottom: 10px;
+}
+
+
+.create-header p {
+    color: #766d7e;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CREATE CARD
+========================================================= */
+
+.create-card {
+    background: #ffffff;
+
+    border: 1px solid #eee7f5;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(67, 42, 112, 0.09);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Colorful top line */
+
+.create-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6c4ab6,
+            #ef8d7c,
+            #d9c7e8
+        );
+}
+
+
+/* =========================================================
+   EDITOR SECTION
+========================================================= */
+
+.editor-section {
+    margin-bottom: 30px;
+}
+
+
+.editor-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #432a70;
+
+    font-size: 15px;
+
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TITLE INPUT
+========================================================= */
+
+.title-input {
+    width: 100%;
+
+    border: 1px solid #ddd4e8;
+
+    background: #faf8fd;
+
+    color: #2d2635;
+
+    padding: 17px 18px;
+
+    border-radius: 13px;
+
+    font-family: inherit;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+.title-input::placeholder {
+    color: #aaa1b2;
+
+    font-weight: 400;
+}
+
+
+.title-input:focus {
+    background: #ffffff;
+
+    border-color: #6c4ab6;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(108, 74, 182, 0.1);
+}
+
+
+/* =========================================================
+   CONTENT INPUT
+========================================================= */
+
+.content-input {
+    width: 100%;
+
+    min-height: 330px;
+
+    resize: vertical;
+
+    border: 1px solid #ddd4e8;
+
+    background: #faf8fd;
+
+    color: #2d2635;
+
+    padding: 18px;
+
+    border-radius: 13px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    outline: none;
+
+    transition: 0.25s;
+}
+
+
+.content-input::placeholder {
+    color: #aaa1b2;
+}
+
+
+.content-input:focus {
+    background: #ffffff;
+
+    border-color: #6c4ab6;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(108, 74, 182, 0.1);
+}
+
+
+/* =========================================================
+   INPUT INFORMATION
+========================================================= */
+
+.input-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 8px;
+
+    color: #9a919f;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   WRITING TIP
+========================================================= */
+
+.writing-tip {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+    padding: 17px 18px;
+
+    margin-bottom: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5efff,
+            #fff4f1
+        );
+
+    border: 1px solid #e9ddf5;
+
+    border-radius: 14px;
+}
+
+
+.tip-icon {
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 11px;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 4px 10px
+        rgba(67, 42, 112, 0.08);
+}
+
+
+.writing-tip strong {
+    display: block;
+
+    color: #432a70;
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+}
+
+
+.writing-tip p {
+    color: #766d7e;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CREATE ACTIONS
+========================================================= */
+
+.create-actions {
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+/* =========================================================
+   CLEAR BUTTON
+========================================================= */
+
+.cancel-button {
+    padding: 12px 20px;
+
+    border-radius: 11px;
+
+    border: 1px solid #ddd4e8;
+
+    background: #ffffff;
+
+    color: #6f6777;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.cancel-button:hover {
+    background: #f7f3fa;
+
+    color: #432a70;
+
+    border-color: #cfc0dd;
+}
+
+
+/* =========================================================
+   PUBLISH BUTTON
+========================================================= */
+
+.publish-button {
+    padding: 13px 24px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c4ab6,
+            #8a64cf
+        );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(108, 74, 182, 0.2);
+
+    transition: 0.25s;
+}
+
+
+.publish-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgba(108, 74, 182, 0.28);
+}
+
+
+.publish-button:disabled {
+    opacity: 0.65;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   CREATE FOOTER MESSAGE
+========================================================= */
+
+.create-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    color: #9a919f;
+
+    font-size: 13px;
+}
+
+
+.create-footer span {
+    color: #ef8d7c;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+    background: #ffffff;
+
+    border: 1px dashed #d8cce5;
+
+    border-radius: 20px;
+
+    padding: 50px;
+
+    text-align: center;
+
+    color: #766d7e;
+}
+
+
+.empty-state h3 {
+    color: #432a70;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   GENERAL FORM CONTAINER
+========================================================= */
+
+.form-container {
+    max-width: 650px;
+
+    margin: 50px auto;
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    border: 1px solid #eee7f5;
+
+    box-shadow:
+        0 12px 35px
+        rgba(67, 42, 112, 0.08);
+}
+
+
+.form-container h2 {
+    color: #432a70;
+
+    margin-bottom: 25px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+
+    color: #4b4352;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #ddd4e8;
+
+    border-radius: 10px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #6c4ab6;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(108, 74, 182, 0.1);
+}
+
+
+.form-submit {
+    width: 100%;
+
+    border: none;
+
+    background: #6c4ab6;
+
+    color: #ffffff;
+
+    padding: 13px;
+
+    border-radius: 11px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.form-submit:hover {
+    background: #432a70;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    margin-top: auto;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: #432a70;
+
+    color: #e9e0f2;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BUTTON FOCUS
+========================================================= */
+
+button {
+    font-family: inherit;
+}
+
+
+button:focus-visible {
+    outline: 3px solid
+        rgba(108, 74, 182, 0.25);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 5%;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+
+    .nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .hero {
+        width: 92%;
+
+        padding: 40px 28px;
+
+        margin-top: 30px;
+    }
+
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    .content {
+        width: 92%;
+    }
+
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .user-area {
+        margin-left: auto;
+    }
+
+
+    .auth-page {
+        padding: 40px 15px;
+    }
+
+
+    .create-page {
+        width: 92%;
+
+        margin-top: 35px;
+    }
+
+
+    .create-header h2 {
+        font-size: 30px;
+    }
+
+
+    .create-card {
+        padding: 30px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .navbar {
+        padding: 14px 4%;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .user-name {
+        display: none;
+    }
+
+
+    .nav-button {
+        padding: 8px 11px;
+
+        font-size: 14px;
+    }
+
+
+    .hero {
+        padding: 32px 22px;
+
+        border-radius: 22px;
+    }
+
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+
+    .blog-card {
+        padding: 23px;
+    }
+
+
+    .blog-card h3 {
+        font-size: 20px;
+    }
+
+
+    .form-container {
+        padding: 25px 20px;
+    }
+
+
+    .auth-page {
+        min-height: 65vh;
+
+        padding: 30px 10px;
+    }
+
+
+    .auth-card {
+        padding: 32px 24px;
+
+        border-radius: 22px;
+    }
+
+
+    .auth-card h2 {
+        font-size: 25px;
+    }
+
+
+    .auth-icon {
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 25px;
+    }
+
+
+    .create-page {
+        width: 94%;
+
+        margin-top: 25px;
+    }
+
+
+    .create-header h2 {
+        font-size: 27px;
+    }
+
+
+    .create-header p {
+        font-size: 14px;
+    }
+
+
+    .create-card {
+        padding: 24px 18px;
+
+        border-radius: 20px;
+    }
+
+
+    .title-input {
+        font-size: 17px;
+
+        padding: 14px;
+    }
+
+
+    .content-input {
+        min-height: 280px;
+
+        padding: 14px;
+
+        font-size: 15px;
+    }
+
+
+    .input-info {
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+    }
+
+
+    .create-actions {
+        flex-direction: column-reverse;
+
+        width: 100%;
+    }
+
+
+    .cancel-button,
+    .publish-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .writing-tip {
+        padding: 14px;
+    }
+
+
+    .footer {
+        padding: 25px 15px;
+    }
+
+}
